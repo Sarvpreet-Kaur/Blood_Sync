@@ -180,185 +180,185 @@ label {
 }
 
 footer {
-    margin-top: 150px;
-    position: relative;
-    width: 100%;
-    padding: 20px 50px;
-    background-color: #c91414;
-    color: var(--color-text);
-    padding: 20px;
-    text-align: center;
-  }
-  .footer-ele {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  footer li {
-    list-style-type: none;
-    display: inline;
-  }
-  footer a {
-    color: var(--color-text);
-    text-decoration: none;
-  }
-  footer .tag {
-    font-size: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  footer .tag #brand-name {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  footer .tag #tag-text {
-    font-size: 15px;
-    text-wrap: wrap;
-  }
-  footer .follow-us {
-    font-size: 35px;
-  }
-  footer .follow-us li{
-    font-size: 2rem;
-  }
-  footer .follow-us i{
-    color: var(--color-text);
-  }
-  footer .follow-us i:hover {
-    text-shadow: none;
-    color: var(--color-bg-elements);
-    transform: translateY(-2px);
-  }
-  
-  .foot-ele {
-    padding: 20px;
-    background-color: #c91414;
-    color:white;
-  }
-  .vhr {
-    display: none;
-  }
-  footer .quick-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color:white;
-    min-width: fit-content;
-  }
-  footer .quick-links span {
-    padding: 15px 0;
-    text-align: left;
-  }
-  footer .quick-links .heading {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  footer .quick-links a:hover {
-    color: var(--color-text-p);
-  }
-  footer .contact a:hover {
-    color:white;
-  }
-  footer .tag a:hover {
-    color: var(--color-text-p);
-  }
-  footer .contact {
-    min-width: fit-content;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  footer .contact span {
-    padding: 15px 0;
-  }
-  footer .join-us {
-    background-color: #a10f0f;
-    max-width: 400px;
-    max-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    justify-content: space-around;
-    border-radius: 10px;
-  }
-  .join-us p {
-    font-size: 2rem;
-    color:#ccc;
-  }
-  .join-us button {
-    padding: 10px;
-    width: 200px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 15px;
-  }
-  #donate-bl {
-    background-color:black;
-    color: white;
-    transition: 0.2s ease;
-  }
-  #help-ask {
-    background-color:white;
-    color: black;
-    transition: 0.2s ease;
-  }
-  #donate-bl:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-  }
-  #help-ask:hover {
-    cursor: pointer;
-    transform: translateY(-2px);
-  }
-  footer .wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url("waveo.jpg");
-    background-size: 1000px 100px;
-  }
-  footer .wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animateWave 10s linear infinite;
-  }
-  footer .wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animateWave_02 8s linear infinite;
-  }
-  footer .wave#wave3 {
-    z-index: 1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animateWave 5s linear infinite;
-  }
-  footer .wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animateWave_02 5s linear infinite;
-  }
-  
-  @keyframes animateWave {
-    0% {
-      background-position-x: 1000px;
-    }
-    100% {
-      background-position-x: 0px;
-    }
-  }
-  @keyframes animateWave_02 {
-    0% {
-      background-position-x: 0px;
-    }
-    100% {
-      background-position-x: 1000px;
-    }
-  }
+  margin-top: 150px;
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: #c91414;
+  color: var(--color-text);
+  padding: 20px;
+  text-align: center;
+}
+.footer-ele {
+display: flex;
+justify-content: space-evenly;
+}
+footer li {
+list-style-type: none;
+display: inline;
+}
+footer a {
+color: var(--color-text);
+text-decoration: none;
+}
+footer .tag {
+font-size: 20px;
+padding-bottom: 20px;
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+footer .tag #brand-name {
+font-size: 30px;
+font-weight: 700;
+}
+footer .tag #tag-text {
+font-size: 15px;
+text-wrap: wrap;
+}
+footer .follow-us {
+font-size: 35px;
+}
+footer .follow-us li{
+font-size: 2rem;
+}
+footer .follow-us i{
+color: var(--color-text);
+}
+footer .follow-us i:hover {
+text-shadow: none;
+color: var(--color-bg-elements);
+transform: translateY(-2px);
+}
+
+.foot-ele {
+padding: 20px;
+background-color: #c91414;
+color:white;
+}
+.vhr {
+display: none;
+}
+footer .quick-links {
+display: flex;
+flex-direction: column;
+justify-content: center;
+color:white;
+min-width: fit-content;
+}
+footer .quick-links span {
+padding: 15px 0;
+text-align: left;
+}
+footer .quick-links .heading {
+font-size: 1rem;
+font-weight: bold;
+}
+footer .quick-links a:hover {
+color: var(--color-text-p);
+}
+footer .contact a:hover {
+color:white;
+}
+footer .tag a:hover {
+color: var(--color-text-p);
+}
+footer .contact {
+min-width: fit-content;
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+footer .contact span {
+padding: 15px 0;
+}
+footer .join-us {
+background-color: #a10f0f;
+max-width: 400px;
+max-height: 400px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 10px;
+justify-content: space-around;
+border-radius: 10px;
+}
+.join-us p {
+font-size: 2rem;
+color:#ccc;
+}
+.join-us button {
+padding: 10px;
+width: 200px;
+font-size: 1rem;
+border: none;
+border-radius: 15px;
+}
+#donate-bl {
+background-color:black;
+color: white;
+transition: 0.2s ease;
+}
+#help-ask {
+background-color:white;
+color: black;
+transition: 0.2s ease;
+}
+#donate-bl:hover {
+cursor: pointer;
+transform: translateY(-2px);
+}
+#help-ask:hover {
+cursor: pointer;
+transform: translateY(-2px);
+}
+footer .wave {
+position: absolute;
+top: -100px;
+left: 0;
+width: 100%;
+height: 100px;
+background: url("About Us/waveo.png");
+background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+z-index: 1000;
+opacity: 1;
+bottom: 0;
+animation: animateWave 10s linear infinite;
+}
+footer .wave#wave2 {
+z-index: 999;
+opacity: 0.5;
+bottom: 10px;
+animation: animateWave_02 8s linear infinite;
+}
+footer .wave#wave3 {
+z-index: 1000;
+opacity: 0.2;
+bottom: 15px;
+animation: animateWave 5s linear infinite;
+}
+/* footer .wave#wave4 {
+z-index: 999;
+opacity: 0.7;
+bottom: 20px;
+animation: animateWave_02 5s linear infinite;
+} */
+
+@keyframes animateWave {
+0% {
+  background-position-x: 1000px;
+}
+100% {
+  background-position-x: 0px;
+}
+}
+@keyframes animateWave_02 {
+0% {
+  background-position-x: 0px;
+}
+100% {
+  background-position-x: 1000px;
+}
+}
