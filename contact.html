@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Blood Sync</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Fredoka:wght@300..700&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/f0cea0d2c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      :root {
+        --color-basic: rgb(196, 24, 24); /*#C41818*/
+        --color-basic-light: rgb(255, 0, 0);
+        --color-shadow: rgb(255, 72, 15);
+        --color-bg-elements: #e7e6e6;
+        --color-text: #fff;
+        --color-text-p: #a3a0a0;
+        --color-footer: #00172e;
+      }
+      * {
+        cursor: pointer;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #navbar {
+        max-height: 40px;
+        /* text-align: center; */
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: 1px 1px 1px 1px rgba(216, 215, 216, 0.75);
+        background-color: white;
+        color: rgb(251, 4, 4);
+        display: inline-block;
+        width: 100%;
+        padding: 7px 0px 0px 0px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        position: fixed;
+        top: 0;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      #logo {
+        z-index: 11;
+        /* font-weight:800; */
+        transform: translate(10%, -22%);
+        /* color: rgb(251, 4, 4);     " color:rgba(215, 16, 16, 0.864);" */
+        font-size: 26px;
+        float: left;
+        margin-left: 45px;
+      }
+      #diff {
+        color: rgba(223, 20, 20, 0.961);
+        font-size: 28px;
+        font-family: "Rubik Wet Paint", system-ui;
+        font-weight: 100;
+        font-style: normal;
+      }
+      #bar {
+        /* padding-top: 6px; */
+        margin-right: 32px;
+        float: right;
+      }
+      ul li a {
+        text-decoration: none;
+        list-style: none;
+        /* color: rgb(250, 102, 57); */
+        color: rgb(196, 24, 24);
+      }
+      ul li a:hover {
+        color: rgb(255, 0, 0);
+        /* color: rgb(255, 72, 15); */
+        font-weight: 800px;
+        text-shadow: 0px 2px 2px rgb(221, 217, 217);
+        /* text-shadow: 1px 1px 4px rgba(168, 160, 160, 0.551); */
+      }
+
+      ul li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 17px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      .message {
+        position: relative;
+        top: 50px;
+        padding: 0 50px;
+      }
+      .container {
+        padding: 0 50px;
+        /* background-color: black; */
+        position: relative;
+        top: 100px;
+        height: 400px;
+        width: 100%;
+        display: flex;
+      }
+      .left {
+        height: inherit;
+        width: 50%;
+        padding: 50px 0;
+      }
+      .right {
+        height: inherit;
+        margin: auto;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .left h1{
+        font-size: 28px;
+        color: var(--color-basic);
+        font-weight: bolder;
+      }
+      .left p{
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      form {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Space between fields */
+        width: 400px; /* Fixed width for the form */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        color: var(--color-basic);
+        font-size: 14px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%; /* Fields take full form width */
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid var(--color-basic);
+        border-radius: 4px;
+      }
+      input:focus, textarea:focus {
+            border-color: var(--color-basic-light); /* Blue border on focus */
+            outline: none; /* Remove default focus outline */
+        }
+        ::placeholder {
+            color: #999; /* Light gray placeholder text */
+            font-style: italic; /* Italic style for placeholder */
+        }
+      textarea {
+        resize: vertical; /* Allow vertical resizing only */
+        min-height: 80px; /* Set a minimum height */
+      }
+      button {
+        /* background-color: #007bff; */
+        background-color: var(--color-basic-light);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        /* background-color: #0056b3; */
+        background-color: var(--color-basic);
+      }
+      .section{
+        /* margin-bottom: 100px; */
+        position: relative;
+        /* bottom: 100px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* text-align: left; */
+        top: 150px;
+        margin: auto;
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 200px;
+      }
+
+      
+/* footer section */
+footer {
+  margin-top: 210px;
+  position: relative;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: var(--color-basic);
+  color: var(--color-text);
+  padding: 20px;
+  text-align: center;
+}
+.footer-ele {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer li {
+  list-style-type: none;
+  display: inline;
+}
+footer a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+footer .tag {
+  font-size: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+footer .tag #brand-name {
+  font-size: 30px;
+  font-weight: 700;
+}
+footer .tag #tag-text {
+  font-size: 15px;
+  text-wrap: wrap;
+}
+footer .follow-us {
+  font-size: 35px;
+}
+footer .follow-us li{
+  font-size: 2rem;
+}
+footer .follow-us i{
+  color: var(--color-text);
+}
+footer .follow-us i:hover {
+  text-shadow: none;
+  color: var(--color-bg-elements);
+  transform: translateY(-2px);
+}
+
+.foot-ele {
+  padding: 20px;
+}
+hr {
+  opacity: 1;
+}
+footer .quick-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: fit-content;
+}
+footer .quick-links span {
+  padding: 15px 0;
+  text-align: left;
+}
+footer .quick-links .heading {
+  font-size: 1rem;
+  font-weight: bold;
+}
+footer .quick-links a:hover {
+  color: var(--color-text-p);
+}
+footer .contact a:hover {
+  color: var(--color-text-p);
+}
+footer .tag a:hover {
+  color: var(--color-text-p);
+}
+footer .contact {
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+footer .contact span {
+  padding: 15px 0;
+}
+footer .join-us {
+  background-color: #a10f0f;
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.join-us p {
+  font-size: 2rem;
+}
+.join-us button {
+  padding: 10px;
+  width: 200px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+}
+#donate-bl {
+  background-color: var(--color-footer);
+  color: var(--color-text);
+  transition: 0.2s ease;
+}
+#help-ask {
+    color: var(--color-footer);
+  background-color: var(--color-bg-elements);
+  transition: 0.2s ease;
+}
+#donate-bl:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+#help-ask:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("waveo.png");
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 10s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 8s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 5s linear infinite;
+}
+/*footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 5s linear infinite;
+}*/
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+
+
+
+
+/* Basic styling for the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #444;
+  color: var(--color-basic);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.popup h3 {
+  margin: 0 0 10px;
+}
+
+.popup button {
+  background-color: var(--color-basic-light);
+  color: var(--color-text);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: var(--color-basic);
+}
+
+/* Background overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+
+
+
+      /* header {
+        background-color: #e63946;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      } */
+      /* .container {
+        max-width: 800px;
+        margin: 80px auto;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      h2 {
+        text-align: center;
+        color: #e63946;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      label {
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      button {
+        padding: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      button {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #d62839;
+      }
+      .contact-info {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      .contact-info p {
+        margin: 0.5rem 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <label id="logo"
+        ><span id="diff">B</span
+        ><span style="font-weight: 900; color: rgba(202, 18, 18, 0.961)"
+          >lood<span id="diff">S</span>ync</span
+        ></label
+      >
+
+      <!-- <div class="searchdiv" onclick="toggles()">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="Search here" />
+        </div> -->
+
+      <div id="bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="project.html">Request</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- <li><select>
+              <option>More</option>
+              <option>Feedback</option>
+              <option>Programs</option>
+            </select></li> -->
+        </ul>
+      </div>
+          
+    </div>
+
+    <!-- <div class="container">
+      <h2>Contact Us</h2>
+      <form action="/submit-contact-form" method="POST">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <h3>Our Contact Details</h3>
+        <p><strong>Email:</strong> support@bloodsync.com</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <p>
+          <strong>Address:</strong> 123 BloodSync Lane, Health City, Country
+        </p>
+      </div>
+    </div> -->
+
+    <div class="message"></div>
+
+    <div class="container">
+        <!-- <span>GET IN TOUCH </span> -->
+      <div class="left">
+        <h1>Connect With Our <span id="diff">BloodSync</span> Community</h1>
+        <p>
+          <!-- We invite you to become an active member of our community. We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Our team is here to assist you. Please use the form below to send us a message, and we'll get back to you as soon as possible. -->
+          Thank you for visiting our website! We value your feedback, inquiries, and suggestions. Whether you're looking for more information about our products/services, need help with a particular issue, or just want to share your thoughts, we're here to assist you.        
+        </p>
+        <p>
+            Our dedicated team is always ready to listen and provide prompt responses. Please fill out the contact form below, and rest assured that we'll get back to you as quickly as possible. We look forward to hearing from you!
+        </p>
+        <!-- <div class="cta">
+          <span>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:123456789">123456789</a>
+          </span>
+          <span>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:support@bloodsync.com">support@bloodsync.com</a>
+          </span>
+        </div> -->
+      </div>
+      <div class="right">
+        <form>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Your Name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
+
+          <label for="comments">Comments</label>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="What can we help you with?"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="section">
+        <h1>Contact Details</h1>
+        <span>Phone: <a href="tel:123456789"><i class="fa-solid fa-phone"></i> +1 123456789</a></span>
+        <span>Email: <a href="mailto:support@bloodsync.com"><i class="fa-solid fa-envelope"></i> support@bloodsync.com</a> </span>
+        <span>Address: <a href="https://maps.app.goo.gl/WW3YPtvM5vRoZjbr6" target="_blank"> <i class="fa-solid fa-location-dot"></i> PSIT, Kanpur</a> </span>
+    </div>
+
+    <footer>
+        <div class="footer-ele">
+          <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <!-- <div class="wave" id="wave4"></div> -->
+          </div>
+  
+          <div class="tag">
+            <span id="brand-name" class="foot-ele">Blood Sync</span>
+            <span class="foot-ele" id="tag-text"
+              >🤍Your blood donation can give someone a second chance at
+              life.🤍</span
+            >
+            <div class="follow-us foot-ele">
+              <ul>
+                <li>
+                  <a onclick="showPopup()"
+                    ><i class="fa-brands fa-square-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a onclick="showPopup()"
+                    ><i class="fa-brands fa-square-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a onclick="showPopup()"
+                    ><i class="fa-brands fa-square-x-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a onclick="showPopup()"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- pop up overlay -->
+            <div class="overlay" id="overlay" onclick="closePopup()"></div>
+            <div class="popup" id="popup">
+              <h3>Coming Soon!</h3>
+              <p>We are working on setting up our social media accounts.</p>
+              <button onclick="closePopup()">Close</button>
+            </div>
+          </div>
+          <!-- <hr /> -->
+          <div class="quick-links foot-ele">
+            <span class="heading">Menu</span>
+            <span><a href="#">Home</a></span>
+            <span><a href="#">About Us</a></span>
+            <span><a href="#">Donate Blood</a></span>
+            <span><a href="#">Find a donor</a></span>
+            <span><a href="#">Contact Us</a></span>
+          </div>
+          <!-- <hr /> -->
+          <div class="contact foot-ele">
+            <h1>Contact Us</h1>
+            <span><a href="tel:1234556">📞 +91 1122112211</a></span>
+            <span
+              ><a href="mailto:abcd@example.com"
+                >✉️ bloodsync@donation.org</a
+              ></span
+            >
+          </div>
+          <!-- <hr /> -->
+          <div class="join-us">
+            <p>Join us and let's make a better world, today</p>
+            <button id="donate-bl">Donate Blood</button>
+            <button id="help-ask">More ways to help</button>
+          </div>
+        </div>
+        <div class="copyright foot-ele">
+          Copyright &copy;2024 Blood Sync. All rights reserved.
+        </div>
+      </footer>
+
+      <script>
+        // Show the popup
+      function showPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      // Close the popup
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+      </script>
+  
+  </body>
+</html>
